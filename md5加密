@@ -1,0 +1,20 @@
+package com.dairui.shiro.test;
+
+import org.apache.shiro.crypto.hash.Md2Hash;
+import org.apache.shiro.crypto.hash.Md5Hash;
+
+public class Md5test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String password = "123456";
+    //加盐
+		String salt = "eteokues";
+    //数据，盐、次数
+		Md5Hash md5Hash = new Md5Hash(password, salt, 1);
+		System.out.println(md5Hash);
+
+	}
+
+}
